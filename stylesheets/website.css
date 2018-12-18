@@ -1,0 +1,863 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI Light", sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #fafafa;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+a:hover,
+a:active {
+    transition: all .3s ease;
+}
+
+header, .yield {
+    max-width: 1200px;
+    margin: auto;
+}
+
+body > header > h2 {
+    margin: 0;
+}
+
+body > header > h2 > a > img {
+    width: 150px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header .logo {
+    float: left;
+}
+
+header .main-nav {
+    float: right;
+}
+
+header:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.main-nav li {
+    float: left;
+    margin-left: 5px;
+    margin-top: 25px;
+}
+
+.main-nav a {
+    display: block;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #222;
+    border: 1px solid transparent;
+    padding: 0 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 3px;
+}
+
+.main-nav a:hover {
+    border-color: #6C6C6C;
+}
+
+footer {
+    clear: both;
+}
+
+#rental-dialog {
+    box-shadow: 0 0 0 4000px rgba(0, 0, 0, 0.4), 0 0 25px #dbdbdb;
+    visibility: hidden;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 500px;
+    width: 600px;
+    background-color: #fff;
+    padding: 15px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    min-width: 320px;
+    z-index: 9999;
+}
+
+#rental-dialog.show {
+    visibility: visible;
+}
+
+#rental-dialog > div > div.ui > a {
+    float: right;
+    background-color: #ECECEC;
+    font-family: cursive;
+    color: #8E8E8E;
+    display: block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+#rental-dialog > div > div.ui > a:hover {
+    background-color: #fff;
+    color: #222222;
+    transform: rotate(90deg);
+}
+
+#rental-dialog > div > div.ui > a:active {
+    background-color: #aaa;
+    color: #222;
+    transform: rotate(90deg) translateX(2px);
+}
+
+fieldset {
+    margin: 20px 0;
+    padding: 0;
+    border: none;
+}
+
+input[type=text], input[type=email], input[type=password], textarea {
+    border: none;
+    border-bottom: 2px solid rgb(42, 55, 107);
+    display: block;
+    min-width: 320px;
+    outline: none;
+    font-size: 1em;
+    background: none;
+    line-height: 40px;
+}
+
+label {
+    color: #aaa;
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    border-radius: 3px;
+    border: none;
+    color: #222;
+    padding: 10px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1em;
+    background-color: #CDCDCD;
+}
+
+body > div > main > section > article:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.info {
+    float: left;
+    max-width: 625px;
+    padding-left: 25px;
+}
+
+body > div > main > section > article > a {
+    float: left;
+    display: block;
+}
+
+a {
+}
+
+.photo-gallery ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.photo-gallery li {
+    flex-basis: 24.7%;
+    position: relative;
+    height: 290px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.photo-gallery li img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 310px;
+}
+
+div.rental > a {
+    display: inline-block;
+    padding: 5px 15px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    background-color: #4AA81B;
+    color: #ffffff;
+    width: 120px;
+    text-align: center;
+    float: right;
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+.yield {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.index main {
+    flex-basis: 70%;
+}
+
+.index aside {
+    flex-basis: 30%;
+}
+
+body > div > main > section.featured > article:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+body > div > main > section.featured > article > div > h2 {
+    margin: 0;
+}
+
+.more-info-button {
+    background-color: #0372CF;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px 15px;
+    float: right;
+    border-radius: 3px;
+    width: 120px;
+    text-align: center;
+}
+
+a.more-info-button:after {
+    content: '\→';
+    display: inline-block;
+    margin-left: 5px;
+}
+
+aside {
+    padding-left: 15px;
+}
+
+aside section h2 {
+    margin: 0;
+}
+
+aside section {
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 15px;
+    -webkit-box-shadow: 0 0 25px #dbdbdb;
+    -moz-box-shadow: 0 0 25px #dbdbdb;
+    box-shadow: 0 0 25px #dbdbdb;
+    margin-bottom: 15px;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    display: block;
+    padding: 15px 15px 0;
+}
+
+figure.movie-cover {
+    overflow: hidden;
+}
+
+ul.movies-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movies-list li {
+    flex-basis: 50%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+a.movie-cover-link {
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #E2E2E2;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+figcaption {
+    background-color: #1caff6;
+    color: #fff;
+    margin-left: -15px;
+    margin-right: -15px;
+    line-height: 35px;
+    margin-top: 14px;
+    text-align: center;
+    font-weight: bold;
+}
+
+section.featured {
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 0 25px #dbdbdb;
+    border-radius: 3px;
+}
+
+article.movie-info- {
+    display: flex;
+    border-radius: 3px;
+    min-height: 340px;
+}
+
+.all-movies .movie-info- {
+
+    padding: 15px;
+    background-color: #FFF;
+    box-shadow: 0 0 25px #dbdbdb;
+}
+
+section.featured:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+header:before {
+    background-color: #fff;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 90px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+body > header > h2 > a {
+    padding-top: 8px;
+    display: block;
+}
+
+body > div > main > section.featured > article > a > img {
+    border-radius: 3px;
+}
+
+h1 {
+    margin: 0 0 15px;
+}
+
+body > div > main > section.up-coming > h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+    text-decoration: underline;
+}
+
+time {
+    color: #737373;
+    float: right;
+    position: absolute;
+    right: 0;
+    font-size: .8em;
+    font-style: italic;
+    transform: translateY(-24px);
+    margin-right: 10px;
+    z-index: 100;
+}
+
+span.name {
+    font-style: italic;
+}
+
+span.movie-name a {
+    color: #1caff6;
+    font-weight: bold;
+}
+
+.content {
+    background-color: #eee;
+    padding: 6px 15px 30px;
+    position: relative;
+    margin-top: 10px;
+    z-index: 50;
+    border-radius: 3px;
+}
+
+.content p {
+    margin: 0;
+}
+
+.content:after {
+    content: '';
+    display: block;
+    border: 6px solid transparent;
+    border-bottom-color: #EEE;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 100%;
+}
+
+.comment {
+    margin-top: 25px;
+    position: relative;
+}
+
+a.browse-all-movies-button {
+    background-color: #B22828;
+    color: #fff;
+    padding: 5px 15px;
+    margin: auto;
+    border-radius: 3px;
+    display: block;
+    width: 160px;
+    text-align: center;
+}
+
+body > div > aside > section.watch-at-home > p:nth-child(4) {
+    margin-bottom: 0;
+}
+
+footer {
+    max-width: 1200px;
+    margin: auto;
+}
+
+footer:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 90px;
+}
+
+footer .footer-help {
+    display: flex;
+    orphans: 0;
+}
+
+footer .footer-help > * {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.back-to-top {
+    order: 1;
+    flex-basis: 100%;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    order: 3;
+    flex-basis: 100%;
+}
+
+footer input {
+    margin-top: 15px;
+}
+
+div.footer-nav > nav > ul {
+    display: flex;
+}
+
+div.footer-nav > nav > ul li {
+    text-align: center;
+    flex-basis: 25%;
+
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px 0;
+    background-color: #fff;
+    box-shadow: 0 0 25px #dbdbdb;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.footer-nav {
+    order: 2;
+    flex-basis: 100%;
+}
+
+.back-to-top a {
+    font-size: 1em;
+    overflow: hidden;
+    text-indent: -10px;
+    display: inline-block;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.all-movies main {
+    flex-basis: 100%;
+}
+
+.all-movies ul.movies-list li {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.all-movies .info {
+    max-width: 100%;
+    padding-left: 180px;
+}
+
+.all-movies article.movie-info- {
+    flex-basis: 49%;
+    margin-bottom: 20px;
+}
+
+article.movie-info- > a {
+    display: block;
+    float: left;
+    width: 224px;
+    max-width: 100%;
+}
+
+.all-movies h2 {
+    margin: 0;
+}
+
+section.locations ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.locations li {
+    flex-basis: 49%;
+    overflow: hidden;
+}
+
+section.locations {
+    box-shadow: 0 0 25px #dbdbdb;
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.locations h2 {
+    margin: 0;
+}
+
+body > div > main > section.locations > ul > li:nth-child(5) {
+    flex-basis: 100%;
+}
+
+p.map {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 3px;
+    border: 1px solid #CFCFCF;
+}
+
+p.map img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+}
+
+p.tel a {
+    color: #1caff6;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+section.about h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2em;
+}
+
+section.about {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.label {
+    flex-basis: 100%;
+    background-color: tomato;
+    color: #fff;
+    padding: 15px;
+    font-family: "Myriad Pro Condensed";
+    font-size: 2em;
+    font-style: italic;
+    border-radius: 13px;
+    margin-bottom: 15px;
+}
+
+.rental {
+    clear: both;
+}
+
+.photo-gallery {
+    clear: both;
+    margin-top: 45px;
+}
+
+.contact main {
+    flex-basis: 100%;
+}
+
+.success.label {
+    background-color: rgb(65, 158, 87);
+}
+
+.label:before {
+    display: inline-block;
+    content: "\2713";
+    font-style: normal;
+    width: 45px;
+    height: 44px;
+    line-height: 51px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.alert.label:before {
+    content: "\2715";
+}
+
+.label.hidden {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transform: perspective(900px) rotateX(270deg) translateZ(-500px);
+    padding: 0;
+    margin: 0;
+}
+
+.label {
+    opacity: 1;
+    visibility: visible;
+    max-height: 150px;
+    transform: perspective(900px) rotateX(0deg) translateZ(0);
+}
+
+.label {
+    transition: all .3s ease;
+}
+
+.tab-panels {
+    min-height: 600px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    background-color: #E2E2E2;
+    position: relative;
+}
+
+.tabs {
+    background-color: #fff;
+    line-height: 50px;
+}
+
+.tabs a {
+    display: block;
+    float: left;
+    text-transform: uppercase;
+    padding: 0 15px;
+    color: #0C2EB0;
+    font-weight: bold;
+}
+
+.tabs:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+a#tab1 {
+}
+
+div.tab-content {
+    position: absolute;
+    transform: translateX(-900px);
+    padding: 15px;
+}
+
+div.tab-content.active {
+    transform: translateX(0);
+}
+
+div.tab-content h2 {
+    margin: 0;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus {
+    border-color: #D864D8;
+
+    transition: all .3s ease;
+}
+
+#rental-dialog.show {
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1;
+}
+
+#rental-dialog {
+    transform: scale(1.2) translate(-50%, -50%);
+    opacity: 0;
+}
+
+#rental-dialog, #rental-dialog.show {
+    transition: all 1s ease;
+}
+
+div.tab-content.active,
+div.tab-content {
+    transition: all .5s ease;
+}
+
+a.active {
+    background-color: #F5F5F5;
+    color: #D266D2;
+}
+
+.tabs a {
+    position: relative;
+    overflow: hidden;
+}
+
+.tabs a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    background-color: #faf;
+    height: 2px;
+    display: block;
+    transition: all .5s ease;
+}
+
+.tabs a.active:after {
+    left: 0;
+    right: 0;
+    transition: all .5s ease;
+}
+
+.tabs a:before {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.41);
+    width: 0;
+    height: 0;
+    opacity: .7;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.tabs a:active:before, .tabs a.active:before {
+    width: 90px;
+    height: 90px;
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+footer input[type=text], footer input[type=email], footer input[type=password] {
+    min-width: 100%;
+}
+
+[role="button"]:hover {
+    transition: all .3s ease;
+    opacity: .9;
+}
+
+[role="button"]:active:hover {
+    transition: all .3s ease;
+    opacity: .95;
+    transform: translateY(3px);
+}
+
+.footer-nav a {
+    font-weight: bold;
+    color: #10597C;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    background-color: #000;
+    color: #FFFFFF;
+}
+
+.all-movies h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+span.movie-name a:hover {
+    color: #64CBFD;
+}
+
+form > p {
+    background-color: #1caff6;
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+@media (max-width: 800px) {
+    .yield {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .yield > * {
+        flex-basis: 100% !important;
+    }
+
+    .all-movies ul.movies-list li {
+        flex-direction: column;
+    }
+}
+
+[role="menuitem"]:active {
+    transform: translateY(2px);
+}
